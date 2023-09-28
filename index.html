@@ -9,8 +9,7 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body>
-    <div id="root"></div>
-    <!-- <div id="myApp"></div>
+    <div id="myApp"></div>
     <div id="Ass"></div>
   <script type="text/babel">
  ReactDOM.render(
@@ -19,35 +18,6 @@
     <script type="text/babel">
     ReactDOM.render(
         <h1> React Developer </h1> ,document.getElementById('Ass'));
-</script>   -->
-<script>
-    const { useState } = React;
-
-    function App() {
-        const [count, setCount] = useState(0);
-
-        const increment = () => {
-            setCount(count + 1);
-        };
-
-        const decrement = () => {
-            setCount(count - 1);
-        };
-
-        const element = (
-            <div>
-                <h1>React Demo</h1>
-                <p>Count: {count}</p>
-                <button onClick={increment}>Increment</button>
-                <button onClick={decrement}>Decrement</button>
-            </div>
-        );
-
-        ReactDOM.render(element, document.getElementById('root'));
-    }
-
-    App();
-</script>
-
+</script>  
 </body>
 </html>
