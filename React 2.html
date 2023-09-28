@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React CDN Example</title>
+</head>
+<body>
+    <div id="root"></div>
+
+    <!-- React CDN Links -->
+    <script src="https://unpkg.com/react@16.13.1/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.13.1/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+
+    <script type="text/babel">
+        // Your React component code goes here
+        class App extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = {
+                    count: 0
+                };
+            }
+
+            increment = () => {
+                this.setState({ count: this.state.count + 1 });
+            }
+
+            decrement = () => {
+                this.setState({ count: this.state.count - 1 });
+            }
+
+            render() {
+                return (
+                    <div>
+                        <h1>React CDN Demo</h1>
+                        <p>Count: {this.state.count}</p>
+                        <button onClick={this.increment}>Increment</button>
+                        <button onClick={this.decrement}>Decrement</button>
+                    </div>
+                );
+            }
+        }
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>
